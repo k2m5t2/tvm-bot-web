@@ -1,7 +1,16 @@
+import wasm from 'vite-plugin-wasm';
 import { pwa } from './config/pwa'
 import { appDescription } from './constants/index'
 
-export default defineNuxtConfig({
+export default defineNuxtConfig({  
+  build: {
+    transpile: ['@mlc-ai/web-llm'], // required in order to build successfully
+  },
+
+  vite: {
+    plugins: [wasm()], // https://stackoverflow.com/questions/73409247/nuxt3-how-to-use-vite-plugin-wasm
+  },
+
   modules: [
     '@vueuse/nuxt',
     '@unocss/nuxt',

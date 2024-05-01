@@ -21,7 +21,7 @@ textarea { resize: none; }
 <template>
   <div class="relative">
     <textarea
-      class="w-1/3 h-24 p-4 rounded-2xl shadow-[inset_0_0px_10px_rgba(0,0,0,0.10)] bg-white"
+      class="w-1/2 h-24 p-4 rounded-2xl shadow-[inset_0_0px_10px_rgba(0,0,0,0.10)] bg-white"
       v-model="textInput"
       @input="handleInput"
     @keydown.up="navigateSuggestions('up')"

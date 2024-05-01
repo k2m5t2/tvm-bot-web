@@ -20,8 +20,13 @@ export const useChatStore = defineStore('chat', () => {
     messages.value.push(newMessage)
   }
 
+  function updateLastMessage(text: string) {
+    messages.value[messages.value.length - 1].text = text
+  }
+
   return {
     messages,
     addMessage,
+    updateLastMessage
   }
 })
